@@ -5,19 +5,19 @@ import TodoForm from './components/TodoForm'
 
 const list = [
   {
-    name: "brush the dog",
+    task: "brush the dog",
     id: 1,
-    done: false,
+    completed: false,
   },
   {
-    name: "feed the fish",
+    task: "feed the fish",
     id: 2,
-    done: false,
+    completed: false,
   },
   {
-    name: "walk the lobster",
+    task: "walk the lobster",
     id: 3,
-    done: false,
+    completed: false,
   },
 
 ];
@@ -33,7 +33,7 @@ class App extends React.Component {
   }
   handleAdd = (task) => {
     const item = {
-      name: task,
+      task: task,
       id: Date.now(),
       completed: false
     }
@@ -43,7 +43,7 @@ class App extends React.Component {
     })
   }
   handleClear = () => {
-    const newList = this.state.list.filter(task => {
+    const newTask = this.state.list.filter(task => {
       return !task.completed
     })
   }

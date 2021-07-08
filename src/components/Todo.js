@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Todo = props => {
-  const handleClick = () => {
+  const handleClick = (evt) => {
     props.handleToggle(props.item.id)
   }
 
