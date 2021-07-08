@@ -46,7 +46,11 @@ class App extends React.Component {
     const newTask = this.state.list.filter(task => {
       return !task.completed
     })
+    this.setState({
+      list: newTask
+    })
   }
+
   handleToggle = (itemId) => {
     this.setState({
       list: this.state.list.map(item => {
